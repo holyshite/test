@@ -15,6 +15,7 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
+      touch-action: none; /* 关键：防止手机端滑动页面 */
     }
 
     canvas {
@@ -42,11 +43,31 @@
       y: h / 2
     };
 
+    /* ===== PC 鼠标 ===== */
     window.addEventListener("mousemove", e => {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
     });
 
+    /* ===== 手机触摸 ===== */
+    window.addEventListener("touchstart", e => {
+      const t = e.touches[0];
+      mouse.x = t.clientX;
+      mouse.y = t.clientY;
+    }, { passive: false });
+
+    window.addEventListener("touchmove", e => {
+      const t = e.touches[0];
+      mouse.x = t.clientX;
+      mouse.y = t.clientY;
+    }, { passive: false });
+
+    window.addEventListener("touchend", () => {
+      mouse.x = w / 2;
+      mouse.y = h / 2;
+    });
+
+    /* ===== 第一版星星逻辑（完全不改） ===== */
     const STAR_COUNT = Math.floor((w * h) / 8000);
     const stars = [];
 
