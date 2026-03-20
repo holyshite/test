@@ -39,3 +39,25 @@
 .glass-card p {
     line-height: 1.6;
 }
+
+/* 链接 */
+/* 普通状态 */
+.link {
+    color: #ffea01;
+    /* 自定义颜色 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* 鼠标悬停时 */
+.link:hover {
+    color: #ffea00;
+    /* 悬停时的颜色 */
+    text-decoration: underline;
+}
+
+/* 点击后的颜色 */
+.link:visited {
+    color: #dfcd00;
+    /* 访问过的链接颜色 */
+}

@@ -1,0 +1,43 @@
+---
+layout: none
+title: 关于
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
+</head>
+
+<body class="star-canvas-page">
+    {% include header.html %}
+
+    {% capture page_content %}
+    <h2>关于我</h2>
+    <p>欢迎来到我的个人网站！我是[BigPeter]，一个热爱编程和技术的开发者。</p>
+    <p>这个网站是我用来分享技术心得、项目经验和生活感悟的地方。</p>
+    <h3>我的兴趣</h3>
+    <ul>
+        <li>前端开发</li>
+        <li>后端技术</li>
+        <li>人工智能</li>
+        <li>开源项目</li>
+    </ul>
+    <h3>联系方式</h3>
+    <p>如果你有任何问题或建议，欢迎通过以下方式联系我：</p>
+    <ul>
+        <li>Email: 751802108@qq.com</li>
+        <li>GitHub: <a href="https://github.com/holyshite" class="link">BigPeter</a></li>
+    </ul>
+    {% endcapture %}
+
+    {% include page.html title=page.title content=page_content %}
+
+    <canvas id="starCanvas"></canvas>
+    <script src="{{ '/assets/js/stars.js' | absolute_url }}"></script>
+</body>
+
+</html>
