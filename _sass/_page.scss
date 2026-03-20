@@ -1,0 +1,41 @@
+.page-container {
+    /* 和导航栏留出距离 */
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    /* 居中 */
+    display: flex;
+    justify-content: center;
+}
+
+/* 主体卡片 */
+.glass-card {
+    width: 70%;
+    max-width: 1200px; // 防止超宽
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    /* ===== 磨砂玻璃核心 ===== */
+    background: rgba(255, 255, 255, 0.013);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    /* 边框 + 阴影 */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+    /* 字体颜色（配合深色背景） */
+    color: white;
+}
+
+/* 标题优化 */
+.glass-card h1 {
+    margin-bottom: 20px;
+}
+
+/* 段落 */
+.glass-card p {
+    line-height: 1.6;
+}

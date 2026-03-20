@@ -9,13 +9,49 @@ title: 首页
 <head>
     <meta charset="UTF-8">
     <title>{{ page.title }} | {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
 </head>
 
 <body class="star-canvas-page">
     {% include header.html %}
+
+    {% capture page_content %}
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    <p>这里是首页内容</p>
+    <p>可以写任何 HTML</p>
+    {% endcapture %}
+
+    {% include page.html title=page.title content=page_content %}
+
     <canvas id="starCanvas"></canvas>
-    <script src="{{ '/assets/js/stars.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/stars.js' | absolute_url }}"></script>
 </body>
 
 </html>

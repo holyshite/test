@@ -10,9 +10,16 @@ body {
 
 /* 页面专属 */
 .star-canvas-page {
-    overflow: hidden;
+    overflow-y: auto;
+    /* 启用垂直滚动 */
+    overflow-x: hidden;
+    /* 隐藏水平滚动条 */
     touch-action: none;
     background: black;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
 }
 
 /* canvas */
