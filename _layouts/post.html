@@ -44,7 +44,7 @@ title: 文章详情
             <!-- 目录 -->
             <aside class="post-toc">
                 <div class="toc-title">目录</div>
-                {{ content | toc }}
+                <div class="toc-content"></div>
             </aside>
 
             <!-- 正文 -->
@@ -56,17 +56,18 @@ title: 文章详情
 
             <!-- 上一篇 / 下一篇 -->
             <nav class="post-nav">
-                {% if page.previous %}
-                <a class="prev" href="{{ page.previous.url }}">
-                    ← {{ page.previous.title }}
+                {% if page.next %}
+                <a class="next" href="{{ page.next.url }}">
+                    ← {{ page.next.title }}
                 </a>
                 {% endif %}
 
-                {% if page.next %}
-                <a class="next" href="{{ page.next.url }}">
-                    {{ page.next.title }} →
+                {% if page.previous %}
+                <a class="prev" href="{{ page.previous.url }}">
+                    {{ page.previous.title }} →
                 </a>
                 {% endif %}
+
             </nav>
 
         </div>
@@ -74,6 +75,7 @@ title: 文章详情
 
     <canvas id="starCanvas"></canvas>
     <script src="{{ '/assets/js/stars.js' | absolute_url }}"></script>
+    <script src="{{ '/assets/js/toc.js' | absolute_url }}"></script>
 </body>
 
 </html>
